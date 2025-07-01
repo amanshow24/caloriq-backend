@@ -8,8 +8,10 @@ app = Flask(__name__)
 CORS(app)
 
 # Load model and gender encoder
-model = joblib.load("backend/model/calories_model.pkl")
-gender_encoder = joblib.load("backend/model/gender_encoder.pkl")
+model = joblib.load("model/calories_model.pkl")
+
+gender_encoder = joblib.load("model/gender_encoder.pkl")
+
 
 @app.route("/", methods=["GET"])
 def home():
