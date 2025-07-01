@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: caloriq-api
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    autoDeploy: true
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 10000
